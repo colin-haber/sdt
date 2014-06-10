@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDT Core
+Bundle-SymbolicName: com.n1nja.eclipse.wst.sdt.core;singleton:=true
+Bundle-Version: 0.1.0
+Bundle-Vendor: Colin Haber
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.9.100",
+ org.eclipse.core.resources;bundle-version="3.8.101",
+ org.eclipse.wst.common.project.facet.core;bundle-version="1.4.300",
+ org.eclipse.wst.web;bundle-version="1.1.701"
+Bundle-Activator: com.n1nja.eclipse.wst.sdt.core.CorePlugin
+Export-Package: com.n1nja.eclipse.wst.sdt.core;uses:="org.eclipse.core.runtime,org.eclipse.wst.common.project.facet.core,org.eclipse.core.resources",
+ com.n1nja.eclipse.wst.sdt.core.internal;x-internal:=true

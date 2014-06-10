@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.wst.sse.ui.StructuredTextEditor"
+            extensions="scss"
+            id="com.n1nja.eclipse.wst.sdt.ui.scss.editor"
+            name="SCSS Editor">
+      </editor>
+      <editor
+            class="org.eclipse.wst.sse.ui.StructuredTextEditor"
+            extensions="sass"
+            id="com.n1nja.eclipse.wst.sdt.ui.sass.editor"
+            name="Sass Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="com.n1nja.eclipse.wst.sdt.ui.SasspathPropertyPage"
+            id="com.n1nja.eclipse.wst.sdt.ui.propertyPages.sasspathPage"
+            name="Sass Build Path">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.core.resources.IProject">
+               <test
+                     property="org.eclipse.core.resources.projectNature"
+                     value="com.n1nja.eclipse.wst.sdt.core.nature">
+               </test>
+            </adapt>
+         </enabledWhen>
+      </page>
+   </extension>
+
+</plugin>
