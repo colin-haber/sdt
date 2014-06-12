@@ -23,8 +23,7 @@ public abstract class SassFacet {
 		static public class ConfigFactory implements IActionConfigFactory {
 			public Object create() throws CoreException {
 				final Sasspath sasspath = new Sasspath(Path.fromOSString(CorePlugin.DEFAULT_OUTPUT_FOLDER));
-				final Sasspath.Entry entry = sasspath.new Entry(Path.fromOSString(CorePlugin.DEFAULT_INPUT_FOLDER));
-				sasspath.add(entry);
+				sasspath.add(sasspath.new Entry(Path.fromOSString(CorePlugin.DEFAULT_INPUT_FOLDER)));
 				return new Configuration(sasspath);
 			}
 		}
@@ -41,14 +40,14 @@ public abstract class SassFacet {
 				this.sasspath = sasspath;
 			}
 		}
-		static public final String ID = "com.n1nja.eclipse.wst.sdt.core.facet.installer";
+		static public final String ID = "com.n1nja.eclipse.wst.sdt.core.facet.install";
 		public void execute(final IProject project, final IProjectFacetVersion fv, final Object config, final IProgressMonitor monitor) throws CoreException {
 			final SassNature nature = (SassNature) Projects.installNature(project, SassNature.ID, monitor);
 			nature.setSasspath(((Configuration) config).sasspath);
 		}
 	}
 	static public class Uninstaller implements IDelegate {
-		static public final String ID = "com.n1nja.eclipse.wst.sdt.core.facet.uninstaller";
+		static public final String ID = "com.n1nja.eclipse.wst.sdt.core.facet.uninstall";
 		public void execute(final IProject project, final IProjectFacetVersion fv, final Object config, final IProgressMonitor monitor) throws CoreException {
 			Projects.uninstallNature(project, SassNature.ID, monitor);
 		}

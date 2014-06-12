@@ -71,7 +71,7 @@
       </project-facet-version>
       <action
             facet="com.n1nja.eclipse.wst.sdt.core.facet"
-            id="com.n1nja.eclipse.wst.sdt.core.facet.installer"
+            id="com.n1nja.eclipse.wst.sdt.core.facet.install"
             type="install"
             version="[3.4-4.0)">
          <delegate
@@ -83,7 +83,7 @@
       </action>
       <action
             facet="com.n1nja.eclipse.wst.sdt.core.facet"
-            id="com.n1nja.eclipse.wst.sdt.core.facet.uninstaller"
+            id="com.n1nja.eclipse.wst.sdt.core.facet.uninstall"
             type="uninstall"
             version="[3.4-4.0)">
          <delegate

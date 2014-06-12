@@ -33,5 +33,14 @@
          </enabledWhen>
       </page>
    </extension>
+   <extension
+         point="org.eclipse.wst.common.project.facet.ui.wizardPages">
+      <wizard-pages
+            action="com.n1nja.eclipse.wst.sdt.core.facet.install">
+         <page
+               class="com.n1nja.eclipse.wst.sdt.ui.SasspathFacetInstallWizardPage">
+         </page>
+      </wizard-pages>
+   </extension>
 
 </plugin>
